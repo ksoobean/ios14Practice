@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondCompositionalLayout: UIViewController {
+class SecondCompositionalLayout: CompositionalExtensionVC {
 
     @IBOutlet weak var collectionView: UICollectionView!
     let colorArray = ColorArray.makeColorData()
@@ -27,30 +27,41 @@ class SecondCompositionalLayout: UIViewController {
 
     private func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
         // 첫번째 아이템(세로로 긴 네모)
-        let firstItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/3), heightDimension: .fractionalHeight(1)))
+        let firstItem = self.makeItem(widthDimension: 1/3, heightDimension: 1)
         
         // 두번째 아이템(가로로 긴 네모)
-        let secondItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5)))
+        let secondItem = self.makeItem(widthDimension: 1, heightDimension: 1/2)
         
         // 세번째, 네번째 아이템
-        let thirdAndForthItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0)))
+        let thirdAndForthItem = self.makeItem(widthDimension: 1/2, heightDimension: 1)
         // 세번째, 네번째 감싸주기
-        let thridAndForthGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5)), subitem: thirdAndForthItem, count: 2)
+        let thridAndForthGroup = self.makeGroup(direction: .horizontal,
+                                                widthDimension: 1, heightDimension: 1/2,
+                                                subItem: thirdAndForthItem, count: 2)
         
         // 두번째, [세번째, 네번째] 감싸주기
-        let secondToForthItemGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(2/3), heightDimension: .fractionalHeight(1.0)), subitems: [secondItem, thridAndForthGroup])
+        let secondToForthItemGroup = self.makeGroup(direction: .vertical,
+                                                    widthDimension: 2/3, heightDimension: 1,
+                                                    subItems: [secondItem, thridAndForthGroup])
+        
         
         // 첫번째, [두번째, [세번째, 네번째]] 감싸주기
-        let topGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(2/3)), subitems: [firstItem, secondToForthItemGroup])
+        let topGroup = self.makeGroup(direction: .horizontal,
+                                      widthDimension: 1, heightDimension: 2/3,
+                                      subItems: [firstItem, secondToForthItemGroup])
         
         // 다섯번째, 여섯번째, 일곱번째 아이템
-        let bottomSmallItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/3), heightDimension: .fractionalHeight(1.0)))
+        let bottomSmallItem = self.makeItem(widthDimension: 1/3, heightDimension: 1)
         
         // 다섯번째, 여섯번째, 일곱번째 감싸주기
-        let bottomGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1/3)), subitem: bottomSmallItem, count: 3)
+        let bottomGroup = self.makeGroup(direction: .horizontal,
+                                         widthDimension: 1/3, heightDimension: 1,
+                                         subItem: bottomSmallItem, count: 3)
         
         // 마지막 [첫번째, [두번째, [세번째, 네번째]]] 랑 [다섯번째, 여섯번째, 일곱번째] 감싸주기
-        let finalContainerGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)), subitems: [topGroup, bottomGroup])
+        let finalContainerGroup = self.makeGroup(direction: .vertical,
+                                                 widthDimension: 1, heightDimension: 1,
+                                                 subItems: [topGroup, bottomGroup])
         
         let section = NSCollectionLayoutSection(group: finalContainerGroup)
         return UICollectionViewCompositionalLayout(section: section)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0943A0255A2DB600028EC0 /* CompositionalExtensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09439F255A2DB600028EC0 /* CompositionalExtensionVC.swift */; };
 		AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */; };
 		AF0AEC9C25592F8C0039DEF6 /* SecondCompositionalLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0AEC9A25592F8C0039DEF6 /* SecondCompositionalLayout.xib */; };
 		AFCDA33A2512F194006909A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA3392512F194006909A0 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF09439F255A2DB600028EC0 /* CompositionalExtensionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalExtensionVC.swift; sourceTree = "<group>"; };
 		AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCompositionalLayout.swift; sourceTree = "<group>"; };
 		AF0AEC9A25592F8C0039DEF6 /* SecondCompositionalLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCompositionalLayout.xib; sourceTree = "<group>"; };
 		AFCDA3362512F194006909A0 /* ios14New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios14New.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				AFCDA3392512F194006909A0 /* AppDelegate.swift */,
 				AFCDA33B2512F194006909A0 /* SceneDelegate.swift */,
 				AFCDA33D2512F194006909A0 /* ViewController.swift */,
+				AF09439F255A2DB600028EC0 /* CompositionalExtensionVC.swift */,
 				AFCDA33F2512F194006909A0 /* Main.storyboard */,
 				AFCDA3472512F195006909A0 /* Info.plist */,
 				AF6A280F2553E7850007E54A /* VM */,
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0943A0255A2DB600028EC0 /* CompositionalExtensionVC.swift in Sources */,
 				AFCDA3772512F2E5006909A0 /* CompositionalLayout.swift in Sources */,
 				AFCDA3AF251361F3006909A0 /* CompositionalLayoutCell.swift in Sources */,
 				AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */,

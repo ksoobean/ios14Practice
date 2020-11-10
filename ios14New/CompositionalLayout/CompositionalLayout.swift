@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CompositionalLayout: UIViewController {
+class CompositionalLayout: CompositionalExtensionVC {
 
     @IBOutlet weak var containerStackView: UIStackView!
     
