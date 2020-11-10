@@ -15,8 +15,13 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func goListCollectionView(_ sender: Any) {
+    @IBAction func goCompositionalLayout(_ sender: Any) {
         let listCollectionVC = CompositionalLayout.init(nibName: "CompositionalLayout", bundle: nil)
+        self.present(listCollectionVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func goSecondCompositionalLayout(_ sender: Any) {
+        let listCollectionVC = SecondCompositionalLayout.init(nibName: "SecondCompositionalLayout", bundle: nil)
         self.present(listCollectionVC, animated: true, completion: nil)
     }
 }

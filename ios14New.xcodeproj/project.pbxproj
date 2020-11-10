@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */; };
+		AF0AEC9C25592F8C0039DEF6 /* SecondCompositionalLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0AEC9A25592F8C0039DEF6 /* SecondCompositionalLayout.xib */; };
 		AFCDA33A2512F194006909A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA3392512F194006909A0 /* AppDelegate.swift */; };
 		AFCDA33C2512F194006909A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA33B2512F194006909A0 /* SceneDelegate.swift */; };
 		AFCDA33E2512F194006909A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA33D2512F194006909A0 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCompositionalLayout.swift; sourceTree = "<group>"; };
+		AF0AEC9A25592F8C0039DEF6 /* SecondCompositionalLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCompositionalLayout.xib; sourceTree = "<group>"; };
 		AFCDA3362512F194006909A0 /* ios14New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios14New.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCDA3392512F194006909A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFCDA33B2512F194006909A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF50BF6325554251007553FB /* SecondCompositionalLayout */ = {
+			isa = PBXGroup;
+			children = (
+				AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */,
+				AF0AEC9A25592F8C0039DEF6 /* SecondCompositionalLayout.xib */,
+			);
+			path = SecondCompositionalLayout;
+			sourceTree = "<group>";
+		};
+		AF6A280E2553E7620007E54A /* CompositionalLayout */ = {
+			isa = PBXGroup;
+			children = (
+				AFCDA3762512F2E5006909A0 /* CompositionalLayout.xib */,
+				AFCDA3752512F2E5006909A0 /* CompositionalLayout.swift */,
+				AFCDA3AD251361F3006909A0 /* CompositionalLayoutCell.swift */,
+				AFCDA3AE251361F3006909A0 /* CompositionalLayoutCell.xib */,
+			);
+			path = CompositionalLayout;
+			sourceTree = "<group>";
+		};
+		AF6A280F2553E7850007E54A /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				AFCDA37C2512F5D8006909A0 /* ColorVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		AFCDA32D2512F194006909A0 = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +146,10 @@
 				AFCDA33B2512F194006909A0 /* SceneDelegate.swift */,
 				AFCDA33D2512F194006909A0 /* ViewController.swift */,
 				AFCDA33F2512F194006909A0 /* Main.storyboard */,
-				AFCDA37C2512F5D8006909A0 /* ColorVM.swift */,
 				AFCDA3472512F195006909A0 /* Info.plist */,
-				AFCDA3752512F2E5006909A0 /* CompositionalLayout.swift */,
-				AFCDA3762512F2E5006909A0 /* CompositionalLayout.xib */,
-				AFCDA3AD251361F3006909A0 /* CompositionalLayoutCell.swift */,
-				AFCDA3AE251361F3006909A0 /* CompositionalLayoutCell.xib */,
+				AF6A280F2553E7850007E54A /* VM */,
+				AF6A280E2553E7620007E54A /* CompositionalLayout */,
+				AF50BF6325554251007553FB /* SecondCompositionalLayout */,
 				AFCDA3422512F195006909A0 /* Assets.xcassets */,
 			);
 			path = ios14New;
@@ -247,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFCDA3B0251361F3006909A0 /* CompositionalLayoutCell.xib in Resources */,
+				AF0AEC9C25592F8C0039DEF6 /* SecondCompositionalLayout.xib in Resources */,
 				AFCDA3782512F2E5006909A0 /* CompositionalLayout.xib in Resources */,
 				AFCDA3462512F195006909A0 /* LaunchScreen.storyboard in Resources */,
 				AFCDA3432512F195006909A0 /* Assets.xcassets in Resources */,
@@ -277,6 +308,7 @@
 			files = (
 				AFCDA3772512F2E5006909A0 /* CompositionalLayout.swift in Sources */,
 				AFCDA3AF251361F3006909A0 /* CompositionalLayoutCell.swift in Sources */,
+				AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */,
 				AFCDA33E2512F194006909A0 /* ViewController.swift in Sources */,
 				AFCDA37D2512F5D8006909A0 /* ColorVM.swift in Sources */,
 				AFCDA33A2512F194006909A0 /* AppDelegate.swift in Sources */,

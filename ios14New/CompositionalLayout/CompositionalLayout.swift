@@ -13,6 +13,7 @@ class CompositionalLayout: UIViewController {
     
     @IBOutlet weak var firstCollectionView: UICollectionView!
     @IBOutlet weak var secondCollectionView: UICollectionView!
+    @IBOutlet weak var thirdCollectionView: UICollectionView!
     
     let colorArray = ColorArray.makeColorData()
     
@@ -21,6 +22,7 @@ class CompositionalLayout: UIViewController {
         
         self.containerStackView.addArrangedSubview(self.makeFirstCollectionView())
         self.containerStackView.addArrangedSubview(self.makeSecondCollectionView())
+        self.containerStackView.addArrangedSubview(self.makeThirdCollectionView())
         
         for subview in self.containerStackView.arrangedSubviews {
             if let collectionView: UICollectionView = subview as? UICollectionView {
@@ -44,10 +46,6 @@ class CompositionalLayout: UIViewController {
         
 //        section.orthogonalScrollingBehavior = .groupPaging
         firstCollectionView.collectionViewLayout = UICollectionViewCompositionalLayout.init(section: section)
-        firstCollectionView.isPagingEnabled = true
-        
-        
-        
         return firstCollectionView
     }
     
@@ -56,7 +54,6 @@ class CompositionalLayout: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalHeight(1),
                                               heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize:.init(widthDimension: .fractionalWidth(1),
                                                                         heightDimension: .absolute(100)),
                                                        subitem: item, count: 4)
@@ -67,6 +64,23 @@ class CompositionalLayout: UIViewController {
         secondCollectionView.collectionViewLayout = UICollectionViewCompositionalLayout.init(section: section)
         
         return secondCollectionView
+    }
+    
+    func makeThirdCollectionView() -> UICollectionView {
+        let leadingItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .fractionalHeight(1)))
+        
+        let trailingItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5)))
+        let trailingGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1.0)), subitem: trailingItem, count: 2)
+        
+        let nestedGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0)), subitems: [leadingItem, trailingGroup])
+        
+        let section = NSCollectionLayoutSection(group: nestedGroup)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 5.0, leading: 10, bottom: 5.0, trailing: 10)
+        section.interGroupSpacing = 10
+        
+        thirdCollectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: section)
+        
+        return thirdCollectionView
     }
 }
 
