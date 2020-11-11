@@ -24,5 +24,10 @@ class ViewController: UIViewController {
         let listCollectionVC = SecondCompositionalLayout.init(nibName: "SecondCompositionalLayout", bundle: nil)
         self.present(listCollectionVC, animated: true, completion: nil)
     }
+    
+    @IBAction func goThirdCompositionalLayout(_ sender: Any) {
+        let listCollectionVC = ThirdCompositionalLayout.init(nibName: "ThirdCompositionalLayout", bundle: nil)
+        self.present(listCollectionVC, animated: true, completion: nil)
+    }
 }
 

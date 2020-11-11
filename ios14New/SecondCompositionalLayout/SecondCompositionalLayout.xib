@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondCompositionalLayout" customModule="ios14New" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="dBg-24-71V" id="AgV-9F-sjW"/>
+                <outlet property="secondCollectionView" destination="fdQ-EN-4gv" id="BT1-81-gcF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,13 +21,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-24-71V">
-                    <rect key="frame" x="32" y="278" width="350" height="350"/>
+                    <rect key="frame" x="20" y="64" width="374" height="570"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LfD-ec-o1L">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-EN-4gv">
+                    <rect key="frame" x="20" y="684" width="374" height="128"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="350" id="F1o-nB-SBy"/>
-                        <constraint firstAttribute="width" constant="350" id="L0H-i0-Gra"/>
+                        <constraint firstAttribute="height" constant="128" id="nrO-b3-Iy2"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LfD-ec-o1L">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ADt-UO-CtW">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -37,10 +47,17 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="dBg-24-71V" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Qfq-hF-gGN"/>
+                <constraint firstItem="dBg-24-71V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3HH-8D-UBt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fdQ-EN-4gv" secondAttribute="trailing" constant="20" id="6YF-Gb-IPf"/>
+                <constraint firstItem="fdQ-EN-4gv" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Gr1-QW-G9b"/>
+                <constraint firstItem="fdQ-EN-4gv" firstAttribute="top" secondItem="dBg-24-71V" secondAttribute="bottom" constant="50" id="Tw5-bP-fZj"/>
+                <constraint firstItem="dBg-24-71V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="n0b-Yk-fZW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dBg-24-71V" secondAttribute="trailing" constant="20" id="nkv-Rk-0x4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fdQ-EN-4gv" secondAttribute="bottom" constant="50" id="opO-fO-ZHI"/>
                 <constraint firstItem="dBg-24-71V" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uZf-BK-S51"/>
+                <constraint firstItem="fdQ-EN-4gv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vi2-yk-hG2"/>
             </constraints>
-            <point key="canvasLocation" x="-206" y="76"/>
+            <point key="canvasLocation" x="-207.24637681159422" y="75.669642857142847"/>
         </view>
     </objects>
     <resources>

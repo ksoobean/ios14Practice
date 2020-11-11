@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6yI-Z4-5Gq">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="20" y="64" width="374" height="778"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Wu-OO-gb1">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="259.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="246"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qBt-td-EKB">
                                 <size key="itemSize" width="128" height="128"/>
@@ -36,7 +36,7 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-p1-eKw">
-                            <rect key="frame" x="0.0" y="279.5" width="414" height="259"/>
+                            <rect key="frame" x="0.0" y="266" width="374" height="246"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z2v-bg-5P9">
                                 <size key="itemSize" width="128" height="128"/>
@@ -46,7 +46,7 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7lK-tU-GSC">
-                            <rect key="frame" x="0.0" y="558.5" width="414" height="259.5"/>
+                            <rect key="frame" x="0.0" y="532" width="374" height="246"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bCJ-Zl-MZQ">
                                 <size key="itemSize" width="128" height="128"/>
@@ -61,10 +61,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6yI-Z4-5Gq" secondAttribute="trailing" id="1AS-vI-Tds"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6yI-Z4-5Gq" secondAttribute="bottom" id="XCf-gy-QYq"/>
-                <constraint firstItem="6yI-Z4-5Gq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dIk-aK-oue"/>
-                <constraint firstItem="6yI-Z4-5Gq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ndl-9s-GTX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6yI-Z4-5Gq" secondAttribute="trailing" constant="20" id="1AS-vI-Tds"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6yI-Z4-5Gq" secondAttribute="bottom" constant="20" id="XCf-gy-QYq"/>
+                <constraint firstItem="6yI-Z4-5Gq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dIk-aK-oue"/>
+                <constraint firstItem="6yI-Z4-5Gq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ndl-9s-GTX"/>
             </constraints>
             <point key="canvasLocation" x="32" y="119"/>
         </view>

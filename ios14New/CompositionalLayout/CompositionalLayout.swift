@@ -27,7 +27,6 @@ class CompositionalLayout: CompositionalExtensionVC {
         for subview in self.containerStackView.arrangedSubviews {
             if let collectionView: UICollectionView = subview as? UICollectionView {
                 collectionView.register(UINib(nibName: "CompositionalLayoutCell", bundle: nil), forCellWithReuseIdentifier: "CompositionalLayoutCell")
-                collectionView.delegate = self
                 collectionView.dataSource = self
             }
         }
@@ -35,15 +34,13 @@ class CompositionalLayout: CompositionalExtensionVC {
     
     func makeFirstCollectionView() -> UICollectionView {
         
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                              heightDimension: .fractionalHeight(1/4))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                                             heightDimension: .fractionalHeight(1/4)))
         let group = NSCollectionLayoutGroup.vertical(layoutSize:.init(widthDimension: .fractionalWidth(1),
                                                                         heightDimension: .fractionalHeight(1)),
                                                        subitem: item, count: 4)
         let section = NSCollectionLayoutSection(group: group)
-        
+        section.interGroupSpacing = 5
 //        section.orthogonalScrollingBehavior = .groupPaging
         firstCollectionView.collectionViewLayout = UICollectionViewCompositionalLayout.init(section: section)
         return firstCollectionView
@@ -85,7 +82,7 @@ class CompositionalLayout: CompositionalExtensionVC {
 }
 
 // collectionview delegate, datasource
-extension CompositionalLayout: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CompositionalLayout: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colorArray.count
     }

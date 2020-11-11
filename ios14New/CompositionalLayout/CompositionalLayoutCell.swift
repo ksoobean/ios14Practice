@@ -15,6 +15,7 @@ class CompositionalLayoutCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        self.colorView.layer.cornerRadius = 5
         self.colorName.textColor = .white
         self.colorName.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 17)
     }

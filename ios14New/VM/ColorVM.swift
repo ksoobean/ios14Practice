@@ -39,6 +39,11 @@ class ColorArray: NSObject {
             ColorVM.initVM(color: .cyan, colorName: "cyan"),
             ColorVM.initVM(color: .magenta, colorName: "magenta")
         ]
-        
+    }
+    
+    public class func makeColorSectionData() -> [[ColorVM]] {
+        return [
+            ColorArray.makeColorData(), ColorArray.makeColorData()
+        ]
     }
 }

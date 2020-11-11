@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AF0943A0255A2DB600028EC0 /* CompositionalExtensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09439F255A2DB600028EC0 /* CompositionalExtensionVC.swift */; };
+		AF0943A7255A36AB00028EC0 /* ThirdCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0943A5255A36AB00028EC0 /* ThirdCompositionalLayout.swift */; };
+		AF0943A8255A36AB00028EC0 /* ThirdCompositionalLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0943A6255A36AB00028EC0 /* ThirdCompositionalLayout.xib */; };
 		AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */; };
 		AF0AEC9C25592F8C0039DEF6 /* SecondCompositionalLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0AEC9A25592F8C0039DEF6 /* SecondCompositionalLayout.xib */; };
+		AF391B1C255B881A00927E75 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF391B1A255B881A00927E75 /* HeaderView.swift */; };
+		AF391B1D255B881A00927E75 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF391B1B255B881A00927E75 /* HeaderView.xib */; };
+		AF391B26255B882B00927E75 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF391B24255B882B00927E75 /* BackgroundView.swift */; };
+		AF391B27255B882B00927E75 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF391B25255B882B00927E75 /* BackgroundView.xib */; };
 		AFCDA33A2512F194006909A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA3392512F194006909A0 /* AppDelegate.swift */; };
 		AFCDA33C2512F194006909A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA33B2512F194006909A0 /* SceneDelegate.swift */; };
 		AFCDA33E2512F194006909A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA33D2512F194006909A0 /* ViewController.swift */; };
@@ -44,8 +50,14 @@
 
 /* Begin PBXFileReference section */
 		AF09439F255A2DB600028EC0 /* CompositionalExtensionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalExtensionVC.swift; sourceTree = "<group>"; };
+		AF0943A5255A36AB00028EC0 /* ThirdCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCompositionalLayout.swift; sourceTree = "<group>"; };
+		AF0943A6255A36AB00028EC0 /* ThirdCompositionalLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCompositionalLayout.xib; sourceTree = "<group>"; };
 		AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCompositionalLayout.swift; sourceTree = "<group>"; };
 		AF0AEC9A25592F8C0039DEF6 /* SecondCompositionalLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCompositionalLayout.xib; sourceTree = "<group>"; };
+		AF391B1A255B881A00927E75 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AF391B1B255B881A00927E75 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		AF391B24255B882B00927E75 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		AF391B25255B882B00927E75 /* BackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
 		AFCDA3362512F194006909A0 /* ios14New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios14New.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCDA3392512F194006909A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFCDA33B2512F194006909A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF0943A4255A368800028EC0 /* ThridCompositionalLayout */ = {
+			isa = PBXGroup;
+			children = (
+				AF0943A5255A36AB00028EC0 /* ThirdCompositionalLayout.swift */,
+				AF0943A6255A36AB00028EC0 /* ThirdCompositionalLayout.xib */,
+			);
+			path = ThridCompositionalLayout;
+			sourceTree = "<group>";
+		};
+		AF391B19255B880600927E75 /* SupplementaryView */ = {
+			isa = PBXGroup;
+			children = (
+				AF391B1A255B881A00927E75 /* HeaderView.swift */,
+				AF391B1B255B881A00927E75 /* HeaderView.xib */,
+				AF391B24255B882B00927E75 /* BackgroundView.swift */,
+				AF391B25255B882B00927E75 /* BackgroundView.xib */,
+			);
+			path = SupplementaryView;
+			sourceTree = "<group>";
+		};
 		AF50BF6325554251007553FB /* SecondCompositionalLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,8 +183,10 @@
 				AFCDA33F2512F194006909A0 /* Main.storyboard */,
 				AFCDA3472512F195006909A0 /* Info.plist */,
 				AF6A280F2553E7850007E54A /* VM */,
+				AF391B19255B880600927E75 /* SupplementaryView */,
 				AF6A280E2553E7620007E54A /* CompositionalLayout */,
 				AF50BF6325554251007553FB /* SecondCompositionalLayout */,
+				AF0943A4255A368800028EC0 /* ThridCompositionalLayout */,
 				AFCDA3422512F195006909A0 /* Assets.xcassets */,
 			);
 			path = ios14New;
@@ -282,9 +316,12 @@
 				AFCDA3B0251361F3006909A0 /* CompositionalLayoutCell.xib in Resources */,
 				AF0AEC9C25592F8C0039DEF6 /* SecondCompositionalLayout.xib in Resources */,
 				AFCDA3782512F2E5006909A0 /* CompositionalLayout.xib in Resources */,
+				AF391B1D255B881A00927E75 /* HeaderView.xib in Resources */,
 				AFCDA3462512F195006909A0 /* LaunchScreen.storyboard in Resources */,
+				AF391B27255B882B00927E75 /* BackgroundView.xib in Resources */,
 				AFCDA3432512F195006909A0 /* Assets.xcassets in Resources */,
 				AFCDA3412512F194006909A0 /* Main.storyboard in Resources */,
+				AF0943A8255A36AB00028EC0 /* ThirdCompositionalLayout.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +347,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0943A0255A2DB600028EC0 /* CompositionalExtensionVC.swift in Sources */,
+				AF0943A7255A36AB00028EC0 /* ThirdCompositionalLayout.swift in Sources */,
+				AF391B26255B882B00927E75 /* BackgroundView.swift in Sources */,
 				AFCDA3772512F2E5006909A0 /* CompositionalLayout.swift in Sources */,
 				AFCDA3AF251361F3006909A0 /* CompositionalLayoutCell.swift in Sources */,
 				AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */,
+				AF391B1C255B881A00927E75 /* HeaderView.swift in Sources */,
 				AFCDA33E2512F194006909A0 /* ViewController.swift in Sources */,
 				AFCDA37D2512F5D8006909A0 /* ColorVM.swift in Sources */,
 				AFCDA33A2512F194006909A0 /* AppDelegate.swift in Sources */,
