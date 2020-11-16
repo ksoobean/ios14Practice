@@ -24,4 +24,11 @@ class HeaderView: UICollectionReusableView {
         self.layer.borderColor = UIColor.init(white: 0, alpha: 0.5).cgColor
     }
     
+    public func configureHeader(title: String) {
+        titleLabel.text = title
+        self.backgroundColor = .white
+        self.layer.cornerRadius = 10
+        self.layer.borderWidth = 5
+        self.layer.borderColor = UIColor.init(white: 0, alpha: 0.5).cgColor
+    }
 }
