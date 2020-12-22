@@ -14,6 +14,7 @@ class CompositionalLayoutCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // 테스트
         
         self.colorView.layer.cornerRadius = 5
         self.colorName.textColor = .white
