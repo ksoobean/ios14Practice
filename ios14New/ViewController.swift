@@ -29,9 +29,5 @@ class ViewController: UIViewController {
         let listCollectionVC = ThirdCompositionalLayout.init(nibName: "ThirdCompositionalLayout", bundle: nil)
         self.present(listCollectionVC, animated: true, completion: nil)
     }
-    @IBAction func randomHeightCellLayout(_ sender: Any) {
-        let randomHeightCellVC = RandomHeightCellLayoutViewController.init(nibName: "RandomHeightCellLayoutViewController", bundle: nil)
-        self.present(randomHeightCellVC, animated: true, completion: nil)
-    }
 }
 

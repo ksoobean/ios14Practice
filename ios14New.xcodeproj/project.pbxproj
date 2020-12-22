@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0943A0255A2DB600028EC0 /* CompositionalExtensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09439F255A2DB600028EC0 /* CompositionalExtensionVC.swift */; };
 		AF0943A7255A36AB00028EC0 /* ThirdCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0943A5255A36AB00028EC0 /* ThirdCompositionalLayout.swift */; };
 		AF0943A8255A36AB00028EC0 /* ThirdCompositionalLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0943A6255A36AB00028EC0 /* ThirdCompositionalLayout.xib */; };
 		AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AEC9925592F8C0039DEF6 /* SecondCompositionalLayout.swift */; };
@@ -17,7 +18,10 @@
 		AF391B27255B882B00927E75 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF391B25255B882B00927E75 /* BackgroundView.xib */; };
 		AF50049E255CC24C00298492 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF50049D255CC24C00298492 /* WidgetKit.framework */; };
 		AF5004A0255CC24C00298492 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF50049F255CC24C00298492 /* SwiftUI.framework */; };
+		AF5004A3255CC24D00298492 /* WidgetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5004A2255CC24D00298492 /* WidgetTest.swift */; };
 		AF5004A6255CC24D00298492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5004A5255CC24D00298492 /* Assets.xcassets */; };
+		AF5004A8255CC24D00298492 /* WidgetTest.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AF5004A4255CC24D00298492 /* WidgetTest.intentdefinition */; };
+		AF5004A9255CC24D00298492 /* WidgetTest.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AF5004A4255CC24D00298492 /* WidgetTest.intentdefinition */; };
 		AF5004AC255CC24D00298492 /* WidgetTestExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF50049B255CC24C00298492 /* WidgetTestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AFCDA33A2512F194006909A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA3392512F194006909A0 /* AppDelegate.swift */; };
 		AFCDA33C2512F194006909A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA33B2512F194006909A0 /* SceneDelegate.swift */; };
@@ -32,11 +36,6 @@
 		AFCDA37D2512F5D8006909A0 /* ColorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA37C2512F5D8006909A0 /* ColorVM.swift */; };
 		AFCDA3AF251361F3006909A0 /* CompositionalLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDA3AD251361F3006909A0 /* CompositionalLayoutCell.swift */; };
 		AFCDA3B0251361F3006909A0 /* CompositionalLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCDA3AE251361F3006909A0 /* CompositionalLayoutCell.xib */; };
-		AFCDABEA2561FB99006103EA /* RandomHeightCellLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDABE82561FB99006103EA /* RandomHeightCellLayoutViewController.swift */; };
-		AFCDABEB2561FB99006103EA /* RandomHeightCellLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCDABE92561FB99006103EA /* RandomHeightCellLayoutViewController.xib */; };
-		AFCDAC4125620363006103EA /* CompositionalExtensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09439F255A2DB600028EC0 /* CompositionalExtensionVC.swift */; };
-		AFCDAC6E25620413006103EA /* WidgetTest.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AF5004A4255CC24D00298492 /* WidgetTest.intentdefinition */; };
-		AFCDAC7325620417006103EA /* WidgetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5004A2255CC24D00298492 /* WidgetTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,8 +112,6 @@
 		AFCDA37C2512F5D8006909A0 /* ColorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorVM.swift; sourceTree = "<group>"; };
 		AFCDA3AD251361F3006909A0 /* CompositionalLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutCell.swift; sourceTree = "<group>"; };
 		AFCDA3AE251361F3006909A0 /* CompositionalLayoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompositionalLayoutCell.xib; sourceTree = "<group>"; };
-		AFCDABE82561FB99006103EA /* RandomHeightCellLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomHeightCellLayoutViewController.swift; sourceTree = "<group>"; };
-		AFCDABE92561FB99006103EA /* RandomHeightCellLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomHeightCellLayoutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +254,6 @@
 				AF6A280E2553E7620007E54A /* CompositionalLayout */,
 				AF50BF6325554251007553FB /* SecondCompositionalLayout */,
 				AF0943A4255A368800028EC0 /* ThridCompositionalLayout */,
-				AFCDABE72561FB72006103EA /* RandomHeightCompositionalLayout */,
 				AFCDA3422512F195006909A0 /* Assets.xcassets */,
 			);
 			path = ios14New;
@@ -279,15 +275,6 @@
 				AFCDA35D2512F195006909A0 /* Info.plist */,
 			);
 			path = ios14NewUITests;
-			sourceTree = "<group>";
-		};
-		AFCDABE72561FB72006103EA /* RandomHeightCompositionalLayout */ = {
-			isa = PBXGroup;
-			children = (
-				AFCDABE82561FB99006103EA /* RandomHeightCellLayoutViewController.swift */,
-				AFCDABE92561FB99006103EA /* RandomHeightCellLayoutViewController.xib */,
-			);
-			path = RandomHeightCompositionalLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,7 +411,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFCDABEB2561FB99006103EA /* RandomHeightCellLayoutViewController.xib in Resources */,
 				AFCDA3B0251361F3006909A0 /* CompositionalLayoutCell.xib in Resources */,
 				AF0AEC9C25592F8C0039DEF6 /* SecondCompositionalLayout.xib in Resources */,
 				AFCDA3782512F2E5006909A0 /* CompositionalLayout.xib in Resources */,
@@ -458,8 +444,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFCDAC6E25620413006103EA /* WidgetTest.intentdefinition in Sources */,
-				AFCDAC7325620417006103EA /* WidgetTest.swift in Sources */,
+				AF5004A8255CC24D00298492 /* WidgetTest.intentdefinition in Sources */,
+				AF5004A3255CC24D00298492 /* WidgetTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,15 +453,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFCDAC4125620363006103EA /* CompositionalExtensionVC.swift in Sources */,
+				AF0943A0255A2DB600028EC0 /* CompositionalExtensionVC.swift in Sources */,
 				AF0943A7255A36AB00028EC0 /* ThirdCompositionalLayout.swift in Sources */,
 				AF391B26255B882B00927E75 /* BackgroundView.swift in Sources */,
 				AFCDA3772512F2E5006909A0 /* CompositionalLayout.swift in Sources */,
+				AF5004A9255CC24D00298492 /* WidgetTest.intentdefinition in Sources */,
 				AFCDA3AF251361F3006909A0 /* CompositionalLayoutCell.swift in Sources */,
 				AF0AEC9B25592F8C0039DEF6 /* SecondCompositionalLayout.swift in Sources */,
 				AF391B1C255B881A00927E75 /* HeaderView.swift in Sources */,
 				AFCDA33E2512F194006909A0 /* ViewController.swift in Sources */,
-				AFCDABEA2561FB99006103EA /* RandomHeightCellLayoutViewController.swift in Sources */,
 				AFCDA37D2512F5D8006909A0 /* ColorVM.swift in Sources */,
 				AFCDA33A2512F194006909A0 /* AppDelegate.swift in Sources */,
 				AFCDA33C2512F194006909A0 /* SceneDelegate.swift in Sources */,

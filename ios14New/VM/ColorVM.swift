@@ -46,11 +46,4 @@ class ColorArray: NSObject {
             ColorArray.makeColorData(), ColorArray.makeColorData()
         ]
     }
-    
-    public class func makeColorDicSectionData() -> [String:[ColorVM]] {
-        return [
-            "First Section" : ColorArray.makeColorData(),
-            "Second Section" : ColorArray.makeColorData()
-        ]
-    }
 }

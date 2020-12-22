@@ -11,8 +11,6 @@ class CompositionalLayoutCell: UICollectionViewCell {
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var colorName: UILabel!
     
-    @IBOutlet weak var viewHeight: NSLayoutConstraint!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,12 +23,5 @@ class CompositionalLayoutCell: UICollectionViewCell {
     public func configureCell(cellVM: ColorVM) {
         self.colorView.backgroundColor = cellVM.color
         self.colorName.text = cellVM.colorName.uppercased()
-    }
-    
-    public func configureRandomHeightCell(cellVM: ColorVM) {
-        self.colorView.backgroundColor = cellVM.color
-        self.colorName.text = cellVM.colorName.uppercased()
-        
-        self.viewHeight.constant = CGFloat.random(in: 100...200)
     }
 }

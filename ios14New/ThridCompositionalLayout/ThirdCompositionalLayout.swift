@@ -62,7 +62,7 @@ extension ThirdCompositionalLayout {
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize:.init(widthDimension: .fractionalWidth(1),
                                                                         heightDimension: .estimated(100)),
-                                                       subitem: item, count: 2)
+                                                       subitem: item, count: 4)
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 15
         section.boundarySupplementaryItems = [self.createSectionHeader()]
