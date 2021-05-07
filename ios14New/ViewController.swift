@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import Photos
+import PhotosUI
 
 class ViewController: UIViewController {
-
+    
+    var selecltImageList: [UIImage] = []
+    
+    var itemProviders: [NSItemProvider] = []
+    var iterator: IndexingIterator<[NSItemProvider]>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,5 +36,12 @@ class ViewController: UIViewController {
         let listCollectionVC = ThirdCompositionalLayout.init(nibName: "ThirdCompositionalLayout", bundle: nil)
         self.present(listCollectionVC, animated: true, completion: nil)
     }
+    
+    @IBAction func imagePicker(_ sender: Any) {
+        let pickerVC = ImagePickerViewController(nibName: "ImagePickerViewController", bundle: nil)
+        pickerVC.modalPresentationStyle = .fullScreen
+        self.present(pickerVC, animated: true, completion: nil)
+        
+    }
+    
 }
-
