@@ -60,7 +60,7 @@
                 <outlet property="imageView" destination="peI-JP-bEH" id="2Sg-pX-KeE"/>
                 <outlet property="selectButton" destination="YFz-RP-Lfb" id="nqe-Ey-mfB"/>
             </connections>
-            <point key="canvasLocation" x="133" y="124"/>
+            <point key="canvasLocation" x="131.8840579710145" y="123.88392857142857"/>
         </collectionViewCell>
     </objects>
     <resources>

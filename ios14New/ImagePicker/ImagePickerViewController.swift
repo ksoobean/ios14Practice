@@ -20,12 +20,20 @@ class ImagePickerViewController: UIViewController {
     let pickerCellId: String = "ImagePickerCell"
     let selectCellId: String = "SelectPreviewCell"
     
-    var fetchResult: PHFetchResult<PHAsset> = PHFetchResult<PHAsset>()
+    var fetchResult: PHFetchResult<PHAsset>?
     var canAccessImages: [ImagePickerVM] = []
 
     var selectImages: [ImagePickerVM] = []
     
     var itemPerRow: CGFloat = 3.0
+    
+    private var mediaType: PHAssetMediaType = .image
+    
+    public class func instance(mediaType: PHAssetMediaType = .image) -> ImagePickerViewController {
+        let vc = ImagePickerViewController(nibName: "ImagePickerViewController", bundle: nil)
+        vc.mediaType = mediaType
+        return vc
+    }
     
     deinit {
         PHPhotoLibrary.shared().unregisterChangeObserver(self)
@@ -60,27 +68,18 @@ class ImagePickerViewController: UIViewController {
     /// 접근할 수 있는 이미지 가져오기
     private func getCanAccessImages() {
         self.canAccessImages = []
-        let options = PHImageRequestOptions()
-        options.isSynchronous = true
-        options.deliveryMode = .highQualityFormat
-        options.resizeMode = .fast
         
         let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)] // 최신순으로 정렬
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)] // 최신순으로 정렬
         
-        self.fetchResult = PHAsset.fetchAssets(with: fetchOptions)
+        self.fetchResult = PHAsset.fetchAssets(with: self.mediaType, options: fetchOptions)
         
-        self.fetchResult.enumerateObjects { (asset, _, _) in
-            PHImageManager().requestImage(for: asset, targetSize: CGSize(width: 400, height: 400), contentMode: .aspectFit, options: options) { (image, info) in
-                guard let image = image else { return }
-                self.canAccessImages.append(ImagePickerVM(imageData: image, isSelected: false, index: -1))
-                DispatchQueue.main.async {
-                    self.imagePickerCollectionView.reloadData()
-                }
-
-            }
-        }
-
+        self.fetchResult?.enumerateObjects({ object, count, stop in
+            self.canAccessImages.append(ImagePickerVM(asset: object, isSelected: false, index: -1))
+        })
+        
+        self.imagePickerCollectionView.reloadData()
+        
     }
     
     /// 선택한 이미지 확인 뷰 셋팅
@@ -105,14 +104,16 @@ class ImagePickerViewController: UIViewController {
         var resultArray: [ImagePickerVM] = []
         for accessImage in self.canAccessImages {
             var newVM = accessImage
-            newVM.imageData = accessImage.imageData
-            newVM.index = self.selectImages.firstIndex {$0.imageData == accessImage.imageData} ?? -1
+            newVM.asset = accessImage.asset
+            newVM.index = self.selectImages.firstIndex {$0.asset == accessImage.asset} ?? -1
             newVM.isSelected = -1 == newVM.index ? false : true
             
             resultArray.append(newVM)
         }
+        self.canAccessImages.removeAll()
+        self.canAccessImages.append(contentsOf: resultArray)
         
-        self.canAccessImages = resultArray
+        self.imagePickerCollectionView.reloadData()
     }
 }
 
@@ -142,7 +143,7 @@ extension ImagePickerViewController : UICollectionViewDelegate, UICollectionView
                 if true == self.canAccessImages[indexPath.row].isSelected {
                     // 이미 선택된 아이템이면 해제
                     self.canAccessImages[indexPath.row].isSelected = false
-                    self.selectImages.removeAll(){ $0.imageData == self.canAccessImages[indexPath.row].imageData }
+                    self.selectImages.removeAll(){ $0.asset == self.canAccessImages[indexPath.row].asset }
                 } else {
                     // 선택되지 않은 아이템이면 선택
                     self.canAccessImages[indexPath.row].isSelected = true
@@ -150,7 +151,7 @@ extension ImagePickerViewController : UICollectionViewDelegate, UICollectionView
                 }
                 // 이미지 순서 업데이트
                 self.setImageIndex()
-                self.imagePickerCollectionView.reloadData()
+                
                 
                 // 선택 확인 뷰 셋팅
                 self.setSelectPreview()
@@ -225,7 +226,7 @@ extension ImagePickerViewController: PHPhotoLibraryChangeObserver {
         // fetch
         self.canAccessImages.removeAll()
         // 전부 다 말고 수정된 거만
-        guard let details = changeInstance.changeDetails(for: self.fetchResult) else { return }
+        guard let details = changeInstance.changeDetails(for: self.fetchResult!) else { return }
         self.update(changes: details.fetchResultAfterChanges)
 
     }
@@ -235,12 +236,10 @@ extension ImagePickerViewController: PHPhotoLibraryChangeObserver {
         requestOptions.isSynchronous = true
         
         changes.enumerateObjects { (asset, _, _) in
-            PHImageManager().requestImage(for: asset, targetSize: CGSize(width: 400, height: 400), contentMode: .aspectFill, options: requestOptions) { (image, info) in
-                guard let image = image else { return }
-                self.canAccessImages.append(ImagePickerVM(imageData: image))
-                DispatchQueue.main.async {
-                    self.imagePickerCollectionView.reloadData()
-                }
+            self.canAccessImages.append(ImagePickerVM(asset: asset))
+            
+            DispatchQueue.main.async {
+                self.imagePickerCollectionView.reloadData()
             }
         }
     }

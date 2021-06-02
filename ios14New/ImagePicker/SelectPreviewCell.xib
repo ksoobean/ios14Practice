@@ -40,7 +40,7 @@
             <connections>
                 <outlet property="imageView" destination="11B-nL-Cm6" id="ntl-uz-Uiw"/>
             </connections>
-            <point key="canvasLocation" x="132" y="88"/>
+            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
         </collectionViewCell>
     </objects>
     <resources>

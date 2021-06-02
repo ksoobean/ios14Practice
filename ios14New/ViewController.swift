@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func imagePicker(_ sender: Any) {
-        let pickerVC = ImagePickerViewController(nibName: "ImagePickerViewController", bundle: nil)
+        let pickerVC = ImagePickerViewController.instance(mediaType: .image)
         pickerVC.modalPresentationStyle = .fullScreen
         self.present(pickerVC, animated: true, completion: nil)
         

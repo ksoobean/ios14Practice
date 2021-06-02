@@ -18,7 +18,19 @@ class SelectPreviewCell: UICollectionViewCell {
     }
     
     public func configureCell(vm: ImagePickerVM) {
-        self.imageView.image = vm.imageData
+//        self.imageView.image = vm.imageData
+        
+        let options = PHImageRequestOptions()
+        options.isSynchronous = true
+        options.deliveryMode = .highQualityFormat
+        options.resizeMode = .fast
+        
+        PHImageManager().requestImage(for: vm.asset, targetSize: self.imageView.bounds.size, contentMode: .aspectFit, options: options) { (image, info) in
+            guard let image = image else { return }
+            self.imageView.image = image
+
+        }
+        
     }
     
 }
